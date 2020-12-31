@@ -10,13 +10,13 @@ namespace SimpleRsaActivator.SerialKeyMaker
     {
         private static string fingerPrint = string.Empty;
 
-        public static string Value()
+        public static string Value(string uniqueText)
         {
             if (string.IsNullOrEmpty(fingerPrint))
             {
                 // Could go more complex but i think cpu with motherboard details and machine name is enough also if any of these change one can argue its a new machine
                 // where as some one adding a network card would change a mac address but could be argued the old key should still work
-                var uniqueString = $"Machine Name:{Environment.MachineName}{Environment.NewLine}CPU >> {cpuId()}{Environment.NewLine}BASE >> {baseId()}{Environment.NewLine}";
+                var uniqueString = $"{uniqueText} Machine Name:{Environment.MachineName}{Environment.NewLine}CPU >> {cpuId()}{Environment.NewLine}BASE >> {baseId()}{Environment.NewLine}";
                 fingerPrint = GetHash(uniqueString);
             }
 

@@ -11,7 +11,7 @@ namespace SimpleRsaActivator.SerialKeyMaker
         private readonly RSASerialKey _rsaSerialKey;
         private readonly string _machineKey;
 
-        public TrialPurchaseWindow(string description, string publicKeyPath, string serialFile = null)
+        public TrialPurchaseWindow(string description, string publicKeyPath, string serialFile = null,string uniqueText="")
         {
             InitializeComponent();
             if (SerialKeyMaker.Activated.IsActivated)
@@ -21,7 +21,7 @@ namespace SimpleRsaActivator.SerialKeyMaker
 
             _publicKeyPath = publicKeyPath ?? Environment.CurrentDirectory + "\\Public.key";
             _serialFileLocation = serialFile ?? Environment.CurrentDirectory + "\\serial.txt";
-            _machineKey = MachineFingerPrint.Value();
+            _machineKey = MachineFingerPrint.Value(uniqueText);
             _rsaSerialKey = new RSASerialKey(_publicKeyPath, null);
             if (File.Exists(_serialFileLocation))
             {
