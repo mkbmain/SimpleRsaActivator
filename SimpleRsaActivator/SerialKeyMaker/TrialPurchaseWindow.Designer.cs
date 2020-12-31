@@ -58,9 +58,9 @@ namespace SimpleRsaActivator.SerialKeyMaker
             // 
             // MachineKeyTextBox
             // 
-            this.MachineKeyTextBox.Enabled = false;
             this.MachineKeyTextBox.Location = new System.Drawing.Point(112, 173);
             this.MachineKeyTextBox.Name = "MachineKeyTextBox";
+            this.MachineKeyTextBox.ReadOnly = true;
             this.MachineKeyTextBox.Size = new System.Drawing.Size(318, 20);
             this.MachineKeyTextBox.TabIndex = 2;
             // 

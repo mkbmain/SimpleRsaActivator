@@ -32,6 +32,9 @@ namespace SimpleRsaActivator.SerialKeyMaker
                     this.Close();
                     return;
                 }
+
+                File.Delete(_serialFileLocation);
+                MessageBox.Show("Previous activation code is failing", "Error Code Not Valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
             this.Description.Text = description;
