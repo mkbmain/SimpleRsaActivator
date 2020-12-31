@@ -25,3 +25,7 @@ e.g
 
           var signed = s.SignData(machine);                                             << this will be done on server not client
           var verify = s.VerifyData(machine, File.ReadAllText(keys+"serial.txt"));       << this is all that needs to be done on client
+          
+          
+         
+# please also note its probably a good idea to change the finger print to include your apps name and maybe another detail or 2
