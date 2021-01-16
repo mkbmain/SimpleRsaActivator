@@ -28,4 +28,4 @@ e.g
           
           
          
-# please also note its probably a good idea to change the finger print to include your apps name and maybe another detail or 2
+# please also note its probably a good idea to change the finger print to include your apps name and maybe another detail or 2 and i tend to store the public key as a embeded resource with in the .exe once generated 
